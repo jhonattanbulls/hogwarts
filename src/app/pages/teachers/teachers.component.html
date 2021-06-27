@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-12">
+            <h1>Teachers</h1>
+        </div>
+      </div>
+    <div class=" d-flex align-items-center justify-content-center">
+      <div class="row b-e w-100">
+        <div class="col-12 col-sm-12">
+          <table  datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover w-100">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Patronus</th>
+                  <th>Age</th>
+                  <th>Image</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let list of listTeachers">
+                  <td>{{ list.name }}</td>
+                  <td>{{ list.patronus }}</td>
+                  <td>{{ list.yearOfBirth | age }}</td>
+                  <td><img class="td-img" src="{{ list.image }}"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+    </div>
+</div>

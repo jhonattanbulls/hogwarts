@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-12">
+        <h1>Characters</h1>
+    </div>
+  </div>
+<div class=" d-flex align-items-center justify-content-center">
+  <div class="row b-e">
+    <div class="col-12 col-sm-12 d-flex align-items-center m-b-15">
+      <h6 class="m-r-5">Choose a house in Hogwarts:</h6>
+      <form [formGroup]="housesForm">
+          <select id="house" formControlName="selectedHouse" class="form-select form-select-sm w-auto" (change)="selectHouse()" aria-label=".form-select-sm example">
+              <option *ngFor="let h of houses" value="{{h.value}}">{{ h.name }}</option>
+          </select>
+      </form>
+    </div>
+    <div class="col-12 col-sm-12">
+      <table  datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Patronus</th>
+              <th>Age</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let list of listCharacters">
+              <td>{{ list.name }}</td>
+              <td>{{ list.patronus }}</td>
+              <td>{{ list.yearOfBirth | age }}</td>
+              <td><img class="td-img" src="{{ list.image }}"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+</div>
+    
+</div>

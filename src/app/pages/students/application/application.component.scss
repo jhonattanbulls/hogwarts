@@ -1,0 +1,35 @@
+table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
+    background-color: #3e494e;
+}
+
+table {
+    background-color: black;
+    color: white;
+}
+table.dataTable tbody tr {
+    background-color: #222;
+}
+
+.b-e{
+    background-color: rgba(255, 255, 255,  0.7);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.m-r-5{
+    margin-right: 5px;
+}
+
+.m-b-15 {
+    margin-bottom: 15px;
+}
+.td-img {
+    width: 50px;
+    border-radius: 100%;
+}
+
+h1 {
+    color: #ecc136;
+    font-family: 'hogwarts';
+    text-align: center;
+}
