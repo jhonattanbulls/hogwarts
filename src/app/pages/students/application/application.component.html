@@ -25,7 +25,7 @@
                   <td>{{ list.name }}</td>
                   <td>{{ list.patronus }}</td>
                   <td>{{ list.yearOfBirth | age }}</td>
-                  <td><img class="td-img" src="{{ list.image }}"></td>
+                  <td><img class="td-img" src="{{ list.image ?? 'https://i.pravatar.cc/300' }}"></td>
                 </tr>
               </tbody>
             </table>
